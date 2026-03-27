@@ -1,0 +1,36 @@
+name: Deployment Workflow
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow only when changes are pushed to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the latest code from the GitHub repository
+      - name: Checkout code
+        uses: actions/checkout@v4.1.6
+
+      # Deploy via SSH
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            # Navigate to the live site directory
+            cd /www/example/public_html
+
+            # Pull the latest changes from the GitHub repository
+            git fetch origin main
+
+            # Reset tracked files only (preserves .env and other untracked files)
+            git reset --hard origin/main
+
+            # Update composer dependencies (plugins, packages, etc.)
+            composer install --no-interaction --prefer-dist --optimize-autoloader

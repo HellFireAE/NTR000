@@ -1,0 +1,8 @@
+{
+  "folders": [
+    { "name": "🌐 Site Root", "path": "." },
+    { "name": "📄 Document Root", "path": "web/" },
+    { "name": "🎨 WordPress Themes", "path": "web/app/themes/" },
+    { "name": "📌 WordPress Plugins", "path": "web/app/plugins/" }
+  ]
+}

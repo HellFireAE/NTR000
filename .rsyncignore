@@ -1,0 +1,42 @@
+# Composer files
+composer.json
+composer.lock
+auth.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Node/npm (if present)
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# IDE and editor files
+.vscode/
+.devcontainer/
+*.code-workspace
+
+# Git and CI/CD
+.git/
+.github/
+.gitignore
+
+# Local config and secrets
+wp-cli.local.yml
+.ssh/
+
+# WordPress uploads/cache/logs
+web/app/uploads/
+web/app/cache/
+*.log
+
+# Other sensitive or unnecessary files
+web/app/upgrade/
+web/.htaccess
+
+# Temporary files
+*.tmp
+*.bak

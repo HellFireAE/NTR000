@@ -1,0 +1,27 @@
+{
+  // ✅ Git Safety Settings - Pause before dangerous operations
+  "git.confirmSync": true,                    // Confirm before sync
+  "git.showPushSuccessNotification": true,    // Show push feedback
+  "git.autofetch": false,                     // No surprise background fetches
+  "git.pruneOnFetch": true,                   // Clean up deleted remote branches
+
+  // 🔒 Prevent Accidental File Deletions
+  "explorer.confirmDelete": true,             // Confirm file deletions
+  "explorer.confirmDragAndDrop": true,        // Confirm drag & drop operations
+
+  // 📊 Show Git Status Clearly
+  "scm.defaultViewMode": "tree",              // Tree view for changes
+  "git.decorations.enabled": true,            // Show git status in explorer
+
+  // ⚡ Convenient Workflow - Fast commits without staging friction
+  "git.enableSmartCommit": true,              // No staging required
+  "git.smartCommitChanges": "all",            // Commit all tracked changes
+  "git.postCommitCommand": "none",            // No auto-actions after commit
+  "git.fetchOnPull": true,                    // Always fetch before pull
+  "git.rebaseWhenSync": true,                 // Clean linear history
+
+  // 🛡️ Critical Safety - Prevent destructive operations
+  "git.allowForcePush": false,                // Block force push completely
+  "git.confirmForcePush": true,               // Double confirm if attempted
+  "git.confirmEmptyCommits": true             // Prevent accidental empty commits
+}

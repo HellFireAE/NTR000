@@ -1,0 +1,38 @@
+{
+    "name": "jonathanhfmills/website-wp-bedrock-template",
+    "type": "project",
+    "homepage": "https://github.com/jonathanhfmills/website-wp-bedrock-template",
+    "authors": [
+        {
+            "name": "Jonathan Mills",
+            "homepage": "https://github.com/jonathanhfmills"
+        }
+    ],
+    "require": {
+        "roots/bedrock": "1.28.4",
+        "roots/wordpress": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "force-unix-separator": true,
+        "installer-paths": {
+        "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+        "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+        "web/app/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "web/wp"
+    },
+    "scripts": {
+        "test": [
+          "phpcs"
+        ]
+    }
+}

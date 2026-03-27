@@ -1,0 +1,44 @@
+{
+  "name": "example-wp-devcontainer",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html",
+  "postCreateCommand": "find .devcontainer/scripts -type f -name '*.sh' -exec sed -i 's/\\r$//' {} + && echo '[INFO] Ensured LF line endings.' && bash .devcontainer/scripts/init.sh",
+  "postStartCommand": "chmod 700 /var/www/html/.ssh 2>/dev/null || true && chmod 600 /var/www/html/.ssh/* 2>/dev/null || true && ssh-keyscan github.com >> /var/www/html/.ssh/known_hosts 2>/dev/null || true",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.claude,target=/root/.claude,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.claude.json,target=/root/.claude.json,type=bind,consistency=cached",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/var/www/html/.ssh,type=bind,consistency=cached"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        "esbenp.prettier-vscode",
+        "DEVSENSE.composer-php-vscode",
+        "ms-vscode.live-server",
+        "docker.docker",
+        "EditorConfig.EditorConfig",
+        "ms-vscode-remote.remote-wsl",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "ms-python.python",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "forwardPorts": [80,8080],
+  "remoteUser": "root",
+  "remoteEnv": {
+    "HOME": "/var/www/html",
+    "MCP_TIMEOUT": "10000",
+    "MAX_MCP_OUTPUT_TOKENS": "200000"
+  }
+}

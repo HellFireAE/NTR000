@@ -1,0 +1,59 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentyfive/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+auth.json
+/.composer/
+/.config/
+/.gitconfig
+
+# WP-CLI
+wp-cli.local.yml
+
+# GitHub CLI config
+.github/hosts.yml
+
+# SSH keys (do not commit private keys)
+.ssh/*
+!.ssh/.gitkeep
+
+# SSL certificates
+.devcontainer/nginx/ssl/*
+!.devcontainer/nginx/ssl/.gitkeep
+
+# Node/npm cache and local directories
+.npm/
+.cache/
+.local/
+node_modules/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.bash_history
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

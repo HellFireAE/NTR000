@@ -3,7 +3,7 @@
   "dockerComposeFile": [
     "docker-compose.yml"
   ],
-  "service": "wordpress",
+  "service": "wp",
   "workspaceFolder": "/var/www/html",
   "postCreateCommand": "find .devcontainer/scripts -type f -name '*.sh' -exec sed -i 's/\\r$//' {} + && echo '[INFO] Ensured LF line endings.' && bash .devcontainer/scripts/init.sh",
   "postStartCommand": "chmod 700 /var/www/html/.ssh 2>/dev/null || true && chmod 600 /var/www/html/.ssh/* 2>/dev/null || true && ssh-keyscan github.com >> /var/www/html/.ssh/known_hosts 2>/dev/null || true",
@@ -34,7 +34,7 @@
       ]
     }
   },
-  "forwardPorts": [80,8080],
+  "forwardPorts": [443, 8081],
   "remoteUser": "root",
   "remoteEnv": {
     "HOME": "/var/www/html",

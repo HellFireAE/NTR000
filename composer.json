@@ -8,9 +8,25 @@
             "homepage": "https://github.com/jonathanhfmills"
         }
     ],
+    "repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test"
+		},
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		}
+    ],
     "require": {
         "roots/bedrock": "1.28.4",
-        "roots/wordpress": "^6.9"
+        "roots/wordpress": "^6.9",
+        "wpackagist-theme/twentytwentyfive": "*",
+        "jonathanhfmills/website-wp-theme-ntara-test": "*"
     },
     "config": {
         "optimize-autoloader": true,

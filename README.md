@@ -15,12 +15,12 @@ Custom WordPress theme for a store/product grid layout, built on [Bedrock](https
 2. When prompted, click **Reopen in Container** — or run **Dev Containers: Reopen in Container** from the command palette.
 3. VS Code will build and start four containers:
 
-   | Container     | Purpose                     | Local URL             |
-   | ------------- | --------------------------- | --------------------- |
-   | `wp`          | PHP-FPM (WordPress runtime) | —                     |
-   | `nginx`       | HTTPS reverse proxy         | https://localhost     |
-   | `database`    | MariaDB 10.11               | `localhost:3307`      |
-   | `adminer_csm` | Database UI                 | http://localhost:8081 |
+   | Container  | Purpose                     | Local URL             |
+   | ---------- | --------------------------- | --------------------- |
+   | `wp`       | PHP-FPM (WordPress runtime) | —                     |
+   | `nginx`    | HTTPS reverse proxy         | https://localhost     |
+   | `database` | MariaDB 10.11               | `localhost:3307`      |
+   | `adminer`  | Database UI                 | http://localhost:8081 |
 
 4. The `postCreateCommand` will run automatically and:
    - Install PHP dependencies via Composer

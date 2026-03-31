@@ -1,8 +1,8 @@
 {
   "folders": [
+    { "name": "🛠️ Dev Container", "path": ".devcontainer/" },
     { "name": "🌐 Site Root", "path": "." },
     { "name": "📄 Document Root", "path": "web/" },
-    { "name": "🎨 WordPress Themes", "path": "web/app/themes/" },
-    { "name": "📌 WordPress Plugins", "path": "web/app/plugins/" }
+    { "name": "🎨 WordPress Themes", "path": "web/app/themes/" }
   ]
 }

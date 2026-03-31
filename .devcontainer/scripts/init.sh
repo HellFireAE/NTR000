@@ -10,20 +10,20 @@ composer config --global use-parent-dir true
 # Move to the workspace folder
 cd ${WORKSPACE_FOLDER:-/var/www/html}
 
-# Install PHP dependencies
-composer install --no-dev --optimize-autoloader
-
 # Set working directory
 CSM_DIR=".devcontainer/scripts"
+
+# .env setup — must run before composer install so post-install-cmd can reach the DB
+bash $CSM_DIR/env-setup.sh
+
+# Install PHP dependencies (triggers post-install-cmd → WordPress setup)
+composer install --no-dev --optimize-autoloader
 
 # Git workflow configuration
 bash $CSM_DIR/git-workflow-setup.sh
 
 # GitHub CLI setup
 bash $CSM_DIR/git-credentials.sh
-
-# .env setup
-bash $CSM_DIR/env-setup.sh
 
 # SSL Certificate setup for local development (zero-config)
 SSL_DIR=".devcontainer/nginx/ssl"

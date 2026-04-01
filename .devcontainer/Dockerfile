@@ -1,5 +1,5 @@
 # Use the official PHP image as a base
-FROM php:8.2-fpm
+FROM php:8.3-fpm
 
 # Install system dependencies (including OpenSSH and mkcert dependencies)
 RUN apt-get update \

@@ -15,17 +15,19 @@ Custom WordPress theme for a store/product grid layout, built on [Bedrock](https
 2. When prompted, click **Reopen in Container** — or run **Dev Containers: Reopen in Container** from the command palette.
 3. VS Code will build and start four containers:
 
-   | Container     | Purpose                     | Local URL             |
-   | ------------- | --------------------------- | --------------------- |
-   | `wp`          | PHP-FPM (WordPress runtime) | —                     |
-   | `nginx`       | HTTPS reverse proxy         | https://localhost     |
-   | `database`    | MariaDB 10.11               | `localhost:3307`      |
-   | `adminer_csm` | Database UI                 | http://localhost:8081 |
+   | Container  | Purpose                     | Local URL             |
+   | ---------- | --------------------------- | --------------------- |
+   | `wp`       | PHP-FPM (WordPress runtime) | —                     |
+   | `nginx`    | HTTPS reverse proxy         | https://localhost     |
+   | `database` | MariaDB 10.11               | `localhost:3307`      |
+   | `adminer`  | Database UI                 | http://localhost:8081 |
 
 4. The `postCreateCommand` will run automatically and:
-   - Install PHP dependencies via Composer
-   - Generate a self-signed SSL certificate for `localhost` (via `mkcert`)
    - Set up your `.env` file from `.env.example`
+   - Install PHP dependencies via Composer
+   - Build theme assets (SCSS → CSS, JS minification)
+   - Install WordPress, activate the theme + WooCommerce, and seed all content via `install.sh`
+   - Generate a self-signed SSL certificate for `localhost` (via `mkcert`)
 
    > **SSL trust (optional):** Browsers will show a certificate warning on first visit. To suppress it, install the mkcert CA on your host machine:
    >
@@ -42,14 +44,20 @@ Custom WordPress theme for a store/product grid layout, built on [Bedrock](https
 
 ### WordPress install
 
-Visit **https://localhost** and complete the WordPress install wizard.
+WordPress is **installed automatically** — no wizard required. Once the `postCreateCommand` finishes, the site is fully set up and ready at **https://localhost**.
 
-- **Database host:** `database`
-- **Database name:** `wordpress`
-- **Username:** `root`
-- **Password:** `root`
+The admin dashboard is at **https://localhost/wp/wp-admin**:
 
-After install, the admin dashboard is at **https://localhost/wp/wp-admin**.
+- **Username:** `admin`
+- **Password:** `password`
+
+The automated install (`install.sh`) seeds the following out of the box:
+
+- WooCommerce activated with 73 products across Toys, Home, Baby, and Shoes categories
+- Navigation menus (Quick, Default, About, Service) with all links wired up
+- WooCommerce sidebar widgets (categories, size filter, rating filter)
+- Product images assigned by category
+- Sample product reviews
 
 ### Database access
 

@@ -1,5 +1,5 @@
 services:
-  adminer_csm:
+  adminer:
     image: adminer:latest
     environment:
       ADMINER_DEFAULT_SERVER: database

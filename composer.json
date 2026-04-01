@@ -9,25 +9,22 @@
         }
     ],
     "repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test"
-		},
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org",
-			"only": [
-				"wpackagist-plugin/*",
-				"wpackagist-theme/*"
-			]
-		}
+        {
+            "type": "vcs",
+            "url": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test"
+        },
+        {
+            "name": "wp-packages",
+            "type": "composer",
+            "url": "https://repo.wp-packages.org"
+        }
     ],
     "require": {
-        "roots/bedrock": "1.28.4",
-        "roots/wordpress": "^6.9",
-        "wpackagist-theme/twentytwentyfive": "*",
-        "wpackagist-plugin/woocommerce": "*",
-        "jonathanhfmills/website-wp-theme-ntara-test": "*"
+        "roots/bedrock": "^1.30.1",
+        "roots/wordpress": "^6.9.4",
+        "wp-theme/twentytwentyfive": "1.4",
+        "wp-plugin/woocommerce": "^10.6.2",
+        "jonathanhfmills/website-wp-theme-ntara-test": "dev-main"
     },
     "config": {
         "optimize-autoloader": true,
@@ -50,6 +47,13 @@
     "scripts": {
         "test": [
           "phpcs"
+        ],
+        "post-install-cmd": [
+            "@composer install --no-dev --working-dir=web/app/themes/website-wp-theme-ntara-test",
+            "bash .devcontainer/scripts/install.sh"
+        ],
+        "post-update-cmd": [
+            "@composer install --no-dev --working-dir=web/app/themes/website-wp-theme-ntara-test"
         ]
     }
 }

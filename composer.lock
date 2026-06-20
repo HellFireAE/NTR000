@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcde18f03135870ab6c10fd7762699e3",
+    "content-hash": "04753faa9f3f032e93fbc316882b51a4",
     "packages": [
         {
             "name": "composer/installers",
@@ -213,38 +213,6 @@
                 }
             ],
             "time": "2025-12-27T19:43:20+00:00"
-        },
-        {
-            "name": "jonathanhfmills/website-wp-theme-ntara-test",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test.git",
-                "reference": "68ecb2929c82d7dc96f6f0f8745c8e4d54ad8b2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jonathanhfmills/website-wp-theme-ntara-test/zipball/68ecb2929c82d7dc96f6f0f8745c8e4d54ad8b2e",
-                "reference": "68ecb2929c82d7dc96f6f0f8745c8e4d54ad8b2e",
-                "shasum": ""
-            },
-            "require": {
-                "twbs/bootstrap": "5.3.8"
-            },
-            "default-branch": true,
-            "type": "wordpress-theme",
-            "authors": [
-                {
-                    "name": "Jonathan Mills",
-                    "homepage": "https://github.com/jonathanhfmills"
-                }
-            ],
-            "homepage": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test",
-            "support": {
-                "source": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test/tree/main",
-                "issues": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test/issues"
-            },
-            "time": "2026-03-31T00:40:32+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -1075,56 +1043,6 @@
             "time": "2025-01-02T08:10:11+00:00"
         },
         {
-            "name": "twbs/bootstrap",
-            "version": "v5.3.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "25aa8cc0b32f0d1a54be575347e6d84b70b1acd7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/25aa8cc0b32f0d1a54be575347e6d84b70b1acd7",
-                "reference": "25aa8cc0b32f0d1a54be575347e6d84b70b1acd7",
-                "shasum": ""
-            },
-            "replace": {
-                "twitter/bootstrap": "self.version"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                },
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                }
-            ],
-            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-            "homepage": "https://getbootstrap.com/",
-            "keywords": [
-                "JS",
-                "css",
-                "framework",
-                "front-end",
-                "mobile-first",
-                "responsive",
-                "sass",
-                "web"
-            ],
-            "support": {
-                "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/v5.3.8"
-            },
-            "time": "2025-08-26T02:01:02+00:00"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.3",
             "source": {
@@ -1210,15 +1128,15 @@
         },
         {
             "name": "wp-plugin/woocommerce",
-            "version": "10.6.2",
+            "version": "10.8.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/10.6.2"
+                "reference": "tags/10.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.6.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -1237,7 +1155,7 @@
                 "issues": "https://wordpress.org/support/plugin/woocommerce",
                 "source": "https://plugins.svn.wordpress.org/woocommerce"
             },
-            "time": "2026-03-31T10:30:49+00:00"
+            "time": "2026-06-15T14:01:01+00:00"
         },
         {
             "name": "wp-theme/twentytwentyfive",
@@ -1269,9 +1187,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "jonathanhfmills/website-wp-theme-ntara-test": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},

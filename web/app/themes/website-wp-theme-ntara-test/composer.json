@@ -1,0 +1,25 @@
+{
+    "name": "jonathanhfmills/website-wp-theme-ntara-test",
+    "version": "0.1.0",
+    "type": "wordpress-theme",
+    "homepage": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test",
+    "authors": [{
+        "name": "Jonathan Mills",
+        "homepage": "https://github.com/jonathanhfmills"
+    }],
+    "require": {
+      "twbs/bootstrap": "5.3.8"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": [
+            "npm ci",
+            "npm run build"
+        ],
+        "post-update-cmd": [
+            "npm ci",
+            "npm run build"
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+#wpadminbar {
+	position: static;
+}
+
+.woocommerce .woocommerce-ordering {
+  margin-bottom: 1rem;
+}
+
+.woocommerce .woocommerce-ordering .orderby {
+  @extend .form-select;
+}
+
+.woocommerce .woocommerce-pagination .nav-links {
+  @extend .pagination;
+}
+
+.woocommerce .woocommerce-pagination ul.page-numbers, .woocommerce-page .woocommerce-pagination ul.page-numbers {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    margin: 0 auto;
+}
+
+.woocommerce .woocommerce-pagination ul.page-numbers li, .woocommerce-page .woocommerce-pagination ul.page-numbers li {
+  @extend .page-item;
+}
+
+.woocommerce .woocommerce-pagination ul.page-numbers li .page-numbers, .woocommerce-page .woocommerce-pagination ul.page-numbers li .page-numbers {
+  @extend .page-link;
+}

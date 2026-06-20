@@ -10,10 +10,6 @@
     ],
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/jonathanhfmills/website-wp-theme-ntara-test"
-        },
-        {
             "name": "wp-packages",
             "type": "composer",
             "url": "https://repo.wp-packages.org"
@@ -23,8 +19,7 @@
         "roots/bedrock": "^1.30.1",
         "roots/wordpress": "^6.9.4",
         "wp-theme/twentytwentyfive": "1.4",
-        "wp-plugin/woocommerce": "^10.6.2",
-        "jonathanhfmills/website-wp-theme-ntara-test": "dev-main"
+        "wp-plugin/woocommerce": "^10.6.2"
     },
     "config": {
         "optimize-autoloader": true,
@@ -38,15 +33,21 @@
     "extra": {
         "force-unix-separator": true,
         "installer-paths": {
-        "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-        "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-        "web/app/themes/{$name}/": ["type:wordpress-theme"]
+            "web/app/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "web/app/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "web/app/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
         },
         "wordpress-install-dir": "web/wp"
     },
     "scripts": {
         "test": [
-          "phpcs"
+            "phpcs"
         ],
         "post-install-cmd": [
             "@composer install --no-dev --working-dir=web/app/themes/website-wp-theme-ntara-test",

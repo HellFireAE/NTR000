@@ -1,0 +1,87 @@
+// Spacing
+$spacer: 1rem;
+$padding-x: 1rem;
+$padding-y: 0.75rem;
+
+// Colors
+$primary: #519ac3;
+$success: #00ff00;
+$info: #0000ff;
+$warning: #ffff00;
+$danger: #ff0000;
+$light: #c4c4c4;
+$dark: #000000;
+
+$theme-colors: (
+  "primary":    $primary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Feature flags
+$enable-caret: true;
+$enable-cssgrid: true;
+$enable-negative-margins: false;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-smooth-scroll: false;
+$color-mode-type: media-query;
+
+// Typography
+$h1-font-size: 1.25rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
+
+$headings-font-weight: 600;
+
+$font-sizes: (
+  0: 0,
+  1: 1rem,
+  2: 1rem,
+  3: 1rem,
+  4: 1rem,
+  5: 1rem,
+  6: 1rem
+);
+
+// Custom variables
+$border-radius: 0;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 2rem;
+$border-radius-pill: 50rem;
+
+$component-active-bg: var(--bs-primary, $primary);
+
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$input-focus-border-color: $component-active-bg;
+
+$btn-box-shadow: none;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-font-weight: 600;
+
+$btn-hover-bg-tint-amount: 25%;
+
+$dropdown-min-width: 100%;
+
+$navbar-nav-link-padding-x: $padding-x;
+
+$nav-link-padding-y: $padding-y;
+$nav-link-padding-x: $padding-x;
+$nav-link-font-weight: 600;
+$nav-link-color: inherit;
+
+$nav-pills-border-radius: $border-radius-pill;
+
+$card-border-width: 2px;
+$card-border-color: $light;
+$card-height: 100%;
